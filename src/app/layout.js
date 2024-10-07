@@ -1,5 +1,6 @@
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from './componets/Navbar'
 
 import { Inter } from "next/font/google"
 // import Navbar from "../components/Navbar"
@@ -26,10 +27,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        
         {/* <ThemeProvider> */}
           {/* <Darkmodetoggle /> */}
-          {/* <Navbar /> */}
-          {children}
+          <Navbar />
+          <main>{children}</main>
         {/* </ThemeProvider> */}
       </body>
     </html >

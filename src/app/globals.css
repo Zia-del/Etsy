@@ -1,10 +1,395 @@
-.nav1{
-    border: 2px solid red;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
 
-.h1{
-    font-family:'Times New Roman', Times, serif;
+.nav1 {
+    border: 2px solid rgb(102, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#h1 {
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     font-size: 39px;
     color: rgb(240, 105, 1);
+}
+
+
+
+.navigationBar {
+    width: 13%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4rem 2rem;
+    /* background-color: #eae7e7; */
+    color: black;
+    /* border: 3px solid rgb(0, 0, 0); */
+}
+
+.navigationBar:hover {
+    background-color: #f6f5f5;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn {
+    display: none;
+}
+
+/* .icon {
+    display: inline-block;
+    transition: all .4s ease-out;
+}
+
+.btn:checked+label>.icon {
+    transform: rotate(180deg);
+} */
+
+.btn:checked~.checker {
+    display: block;
+}
+
+.checker {
+    background-color: rgb(255, 255, 255);
+    margin-top: .8rem;
+    position: absolute;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: scroll;
+    height: 35rem;
+    width: 20rem;
+    line-height: 3rem;
+    font-weight: 300;
+    border-radius: .6rem;
+}
+
+#checkItems {
+    padding: .5rem;
+    color: black;
+    text-decoration: none;
+} 
+
+#checkItems:hover {
+    background-color: #eae7e7;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownButton {
+    display: inline-block;
+    padding: .65rem 2rem;
+}
+
+.list {
+    position: absolute;
+    background-color: white;
+    border-top: .1px solid red;
+    display: none;
+    width: 12rem;
+    height: auto;
+}
+
+.dropDown:hover .list {
+    display: block;
+}
+
+/* .items {
+    padding: .1rem;
+}
+
+.items:hover {
+    color: #a43a3a;
+    cursor: pointer;
+} */
+
+.inpute {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fname {
+    width: 50rem;
+    height: 3rem;
+    border-radius: 4rem;
+    border: 2px solid black;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.inpute{
+    border: 2px solid blue;
+}
+
+#p{
+    width: 83px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#p:hover{
+    background-color: #f6f5f5;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.pholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 12%;
+}
+
+
+.p{
+    padding: 11px;  
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+.p:hover{
+    background-color: rgb(169, 226, 249);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.nav2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(215, 214, 214);
+}
+
+.nav2sub{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    font-size: 12px;
+    border: 2px solid red;
+    padding: 2px;
+}
+
+.nav2p{
+    width: 17%;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav2p:hover{
+    background-color: #f6f5f5;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#nav2p:hover{
+    background-color: #f6f5f5;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#nav2p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    height: 2.2rem;    
+}
+
+.backgroundimage1{
+    padding: .3rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* margin-left: 4rem; */
+    /* height: 15rem;
+    width: 25%; */
+}
+
+.backgroundimage{
+    background-image: url("../app/public/image/babyhat.avif");
+    width: 19%;
+    height: 10rem;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+ .backgroundimage2{
+    background-image: url("../app/public/image/babyinabed.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage2:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage3{
+    background-image: url("../app/public/image/pompombabyhat.avif");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;    
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage3:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage4{
+    background-image: url("../app/public/image/twins.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage4:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage5{
+    background-image: url("../app/public/image/oraldesign.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage5:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+
+ .backgroundimage{
+    background-image: url("../app/public/image/babyhat.avif");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage6{
+    background-image: url("../app/public/image/pinkbabyhat.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage6:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage7{
+    background-image: url("../app/public/image/bluebabyhat.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage7:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage8{
+    background-image: url("../app/public/image/pinkvariatybabyhat.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage8:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimage9{
+    background-image: url("../app/public/image/littleblueriddinghall.webp");
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 19%;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.backgroundimage9:hover{
+    border-radius: .3rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.backgroundimagep{
+    font-size: 10px;
+    background-color: white;
+    width: 29%;
+    padding: .3rem;
+    border-radius: 2rem;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.8rem;
+    margin-left: 3px;
+}
+
+#backgroundimagep{
+    margin-top: 7.6rem;
 }

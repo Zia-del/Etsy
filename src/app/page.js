@@ -1,27 +1,36 @@
 'use client'
-import React from 'react'
-
-// import Hero from '@/components/Hero'
-// import Section1 from '@/components/Section1'
-// import Section2 from '@/components/Section2'
-// import Section3 from '@/components/Section3'
-// import Section4 from '@/components/Section4'
-// import Searchfunctionality from '@/components/Searchfunctionality'
-// import Increase from '@/components/Increase'
-
-
+import React, { useState } from 'react'
+import Section1 from '../../componets/sectin1/Section1'
+import Section2 from '../../componets/section2/Section2'
+import Signup from '../../componets/signuppop/Signup'
+import Navbar from '../../componets/navbar/Navbar'
+import Section3 from '../../componets/section3/Section3'
+import Section4 from '../../componets/section4/Section4'
+import Section5 from '../../componets/section5/Section5'
+import Footer from '../../componets/footer/Footer'
 
 const page = () => {
+
+  const [showPopUp, setShowPopUp] = useState(false)
+
+  const handlePopUp = () => {
+    setShowPopUp(!showPopUp)
+  }
+
+  
   return (
     <div>
-      
-      {/* <Hero/>
-      <Section1/>
-      <Section2/>
+      <Navbar handlePopUp={handlePopUp} />
+      <Section1 />
+      <Section2 />
       <Section3/>
       <Section4/>
-      <Searchfunctionality/>
-      <Increase/> */}
+      <Section5/>
+      <Footer/>
+
+      {
+        showPopUp ? <Signup /> : ""
+      }
     </div>
   )
 }
